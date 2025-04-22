@@ -11,8 +11,8 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:openvsx/VMware/vscode-spring-boot@1.59.0
+  id: pkg:openvsx/VMware/vscode-spring-boot@1.62.0
   download:
     file: VMware.vscode-spring-boot-{{version}}.vsix
-# share:
-#   spring-boot-tools/jars/: extension/jars/
+share:
+  spring-boot-tools/jars/: extension/jars/
