@@ -1,0 +1,14 @@
+name: java-project-manager
+description: |
+  Manage Java projects in Visual Studio Code
+homepage: https://github.com/microsoft/vscode-java-dependency
+licenses:
+  - EPL-1.0
+languages:
+  - Java
+categories:
+  - LSP
+source:
+  id: pkg:openvsx/vscjava/vscode-java-dependency@0.24.1
+  download:
+    file: vscjava.vscode-java-dependency-{{version}}.vsix
