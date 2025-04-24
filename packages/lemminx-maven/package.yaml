@@ -10,7 +10,8 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:github/eclipse/lemminx-maven@0.12.1
+  # renovate:datasource=github-tags
+  id: pkg:github/eclipse/lemminx-maven@0.12.0
   build:
     run: |
       mvn clean package -DskitTests
