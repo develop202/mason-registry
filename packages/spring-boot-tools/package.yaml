@@ -11,6 +11,7 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:github/spring-projects/spring-tools@4.30.0
-  asset:
-    file: /{{version}}.RELEASE/vscode-spring-boot-*.vsix
+  id: pkg:generic/spring-projects/spring-tools@1.63.0-202504231030
+  download:
+    files:
+      spring-boot.vsix: https://cdn.spring.io/spring-tools/snapshot/vscode-extensions/vscode-spring-boot/vscode-spring-boot-{{version}}.vsix
