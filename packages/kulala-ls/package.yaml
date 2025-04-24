@@ -8,6 +8,6 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:npm/@mistweaverco/kulala-fmt@1.8.1
+  id: pkg:npm/@mistweaverco/kulala-ls@1.8.1
 bin:
   kulala-ls: kulala-ls
