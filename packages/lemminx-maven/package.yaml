@@ -10,7 +10,6 @@ languages:
 categories:
   - LSP
 source:
-  # renovate:datasource=github-tags
   id: pkg:github/eclipse/lemminx-maven@0.12.1
   build:
     run: |
