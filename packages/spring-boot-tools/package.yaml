@@ -11,6 +11,7 @@ languages:
 categories:
   - LSP
 source:
+  # renovate:datasource=github-tags
   id: pkg:generic/spring-projects/spring-tools@1.63.0-202504231030
   download:
     files:

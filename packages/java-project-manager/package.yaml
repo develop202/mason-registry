@@ -9,6 +9,9 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:openvsx/vscjava/vscode-java-dependency@0.24.1
-  download:
-    file: vscjava.vscode-java-dependency-{{version}}.vsix
+  # renovate:datasource=github-tags
+  id: pkg:github/microsoft/vscode-java-dependency@0.24.1
+  build:
+    run: |
+      cd jdtls.ext
+      mvn clean package

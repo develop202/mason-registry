@@ -1,0 +1,17 @@
+name: lemminx-maven
+description: |
+  Want to provide some powerful Maven pom edition
+  support in your software without pain? Search no more!
+homepage: https://github.com/eclipse/lemminx-maven
+licenses:
+  - EPL-2.0
+languages:
+  - XML
+categories:
+  - LSP
+source:
+  # renovate:datasource=github-tags
+  id: pkg:github/eclipse/lemminx-maven@0.12.1
+  build:
+    run: |
+      mvn clean package -DskitTests
