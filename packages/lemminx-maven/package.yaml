@@ -14,4 +14,4 @@ source:
   id: pkg:github/eclipse/lemminx-maven@0.12.0
   build:
     run: |
-      mvn clean package -DskitTests
+      mvn clean package -DskipTests
