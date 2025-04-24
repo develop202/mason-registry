@@ -15,3 +15,6 @@ source:
   build:
     run: |
       mvn clean package -DskipTests
+      cp -r ./lemminx-maven/target/lemminx-maven-*-zip-with-dependencies.zip ..
+      rm -rf ./*
+      mv ../lemminx-maven-*-zip-with-dependencies.zip .
