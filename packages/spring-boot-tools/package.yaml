@@ -12,5 +12,5 @@ categories:
   - LSP
 source:
   id: pkg:github/spring-projects/spring-tools@1.62.0-RC1
-  download:
+  asset:
     file: vscode-spring-boot-{{version}}.vsix
