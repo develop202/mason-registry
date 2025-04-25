@@ -1,3 +1,4 @@
+---
 name: java-project-manager
 description: |
   Manage Java projects in Visual Studio Code
@@ -14,4 +15,8 @@ source:
   build:
     run: |
       cd jdtls.ext
-      mvn clean package
+      mvn clean package -DskipTests
+      cd ..
+      cp -r jdtls.ext/com.microsoft.jdtls.ext.core/target/com.microsoft.jdtls.ext.core-0.24.1.jar ..
+      rm -rf ./* ./.*
+      cp ../com.microsoft.jdtls.ext.core-0.24.1.jar .

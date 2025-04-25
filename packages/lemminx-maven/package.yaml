@@ -1,3 +1,4 @@
+---
 name: lemminx-maven
 description: |
   Want to provide some powerful Maven pom edition
@@ -16,5 +17,7 @@ source:
     run: |
       mvn clean package -DskipTests
       cp -r ./lemminx-maven/target/lemminx-maven-*-zip-with-dependencies.zip ..
-      rm -rf ./*
-      mv ../lemminx-maven-*-zip-with-dependencies.zip .
+      rm -rf ./* ./.*
+      mkdir jars
+      unzip -d ./jars ../lemminx-maven-*-zip-with-dependencies.zip
+      rm -rf ../lemminx-maven-*-zip-with-dependencies.zip
