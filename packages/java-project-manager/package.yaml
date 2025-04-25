@@ -19,4 +19,4 @@ source:
       cd ..
       cp -r jdtls.ext/com.microsoft.jdtls.ext.core/target/com.microsoft.jdtls.ext.core-0.24.1.jar ..
       rm -rf ./* ./.*
-      cp ../com.microsoft.jdtls.ext.core-0.24.1.jar .
+      mv ../com.microsoft.jdtls.ext.core-0.24.1.jar .
