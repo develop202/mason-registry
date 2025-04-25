@@ -13,11 +13,8 @@ source:
   build:
     run: |
       ./make.sh
-      cp -r ./bin/lua-language-server ../lua-language-server1
-      rm -rf ./* ./.*
-      cp -r ../lua-language-server1 ./lua-language-server
-      rm -rf ../lua-language-server1
+      rm -rf 3rd build doc Dockerfile LICENSE log make* README.md test* theme-tokens.md tools ./.*
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/LuaLS/vscode-lua/master/package.json
 bin:
-  lua-language-server: "lua-language-server"
+  lua-language-server: ./bin/lua-language-server
