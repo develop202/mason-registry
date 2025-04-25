@@ -1,0 +1,15 @@
+---
+name: stylua
+description: An opinionated Lua code formatter.
+homepage: https://github.com/JohnnyMorganz/StyLua
+licenses:
+  - MPL-2.0
+languages:
+  - Lua
+  - Luau
+categories:
+  - Formatter
+source:
+  id: pkg:cargo/stylua@v2.1.0
+bin:
+  stylua: cargo:stylua
