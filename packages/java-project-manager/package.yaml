@@ -17,6 +17,6 @@ source:
       cd jdtls.ext
       mvn clean package -DskipTests
       cd ..
-      cp -r jdtls.ext/com.microsoft.jdtls.ext.core/target/com.microsoft.jdtls.ext.core-{{version}}.jar ..
+      cp -r jdtls.ext/com.microsoft.jdtls.ext.core/target/com.microsoft.jdtls.ext.core-*.jar ..
       rm -rf ./* ./.*
       mv ../com.microsoft.jdtls.ext.core-0.24.1.jar .
