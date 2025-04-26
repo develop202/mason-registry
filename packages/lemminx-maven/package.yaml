@@ -17,7 +17,7 @@ source:
     run: |
       mvn clean package -DskipTests
       cp -r ./lemminx-maven/target/lemminx-maven-*-zip-with-dependencies.zip ..
-      rm -rf ./* ./.*
+      rm -rf ./* .git .github .mvn .project .vscode
       mkdir jars
       unzip -d ./jars ../lemminx-maven-*-zip-with-dependencies.zip
       rm -rf ../lemminx-maven-*-zip-with-dependencies.zip
