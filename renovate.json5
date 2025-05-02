@@ -1,4 +1,4 @@
 {
-  schedule: ["1 */4 * * *"],
+  schedule: "0 */4 * * *",
   extends: ["github>mason-org/registry-renovate-config"],
 }
