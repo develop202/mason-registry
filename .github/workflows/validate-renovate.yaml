@@ -1,26 +1,21 @@
----
 name: Validate Renovate config
-
 on:
   push:
     branches:
       - main
   pull_request:
-
 jobs:
   validate:
     name: Validate renovate config
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Check for config changes
         id: diff
         uses: tj-actions/changed-files@v46
         with:
           files: |
             renovate.json5
-
       - shell: bash
         if: ${{ steps.diff.outputs.any_changed == 'true' }}
         run: |

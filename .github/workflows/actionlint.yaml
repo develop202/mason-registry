@@ -1,9 +1,6 @@
----
 name: Actionlint
-
 on:
   - pull_request
-
 jobs:
   validate:
     name: Actionlint

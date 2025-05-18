@@ -1,4 +1,3 @@
----
 name: kulala-ls
 description: A minimal language server for HTTP syntax.
 homepage: https://github.com/mistweaverco/kulala-ls

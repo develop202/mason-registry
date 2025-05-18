@@ -1,6 +1,4 @@
----
 name: Package tests
-
 on:
   pull_request:
   workflow_dispatch:
@@ -9,7 +7,6 @@ on:
         type: string
         description: Space-separated list of package definitions to test.
         required: true
-
 jobs:
   lint:
     name: Registry lint
@@ -21,10 +18,10 @@ jobs:
       - uses: mason-org/actions/registry-lint@v1
         with:
           packages: ${{ github.event.inputs.packages }}
-
   test:
     name: Package tests
     needs: lint
     uses: mason-org/actions/.github/workflows/package-tests.yaml@v1
     with:
       packages: ${{ github.event.inputs.packages }}
+      skip: ${{ github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'ci:skip-package-tests') }}
