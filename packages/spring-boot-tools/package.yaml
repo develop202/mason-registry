@@ -1,3 +1,4 @@
+---
 name: spring-boot-tools
 description: |
   Provides validation and content assist for Spring Boot `application.properties`,
@@ -12,7 +13,7 @@ categories:
   - LSP
 source:
   # renovate:datasource=github-tags
-  id: pkg:generic/spring-projects/spring-tools@1.63.0-202505161109
+  id: pkg:generic/spring-projects/spring-tools@1.64.0-202506120649
   download:
     files:
       spring-boot.vsix: https://cdn.spring.io/spring-tools/snapshot/vscode-extensions/vscode-spring-boot/vscode-spring-boot-{{version}}.vsix
