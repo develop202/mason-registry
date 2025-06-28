@@ -18,3 +18,4 @@ schemas:
   lsp: vscode:https://raw.githubusercontent.com/LuaLS/vscode-lua/master/package.json
 bin:
   lua-language-server: ./bin/lua-language-server
+
