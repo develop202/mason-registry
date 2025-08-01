@@ -11,9 +11,13 @@ languages:
   - Java SpringBoot
 categories:
   - LSP
+# source:
+#   # renovate:datasource=github-tags
+#   id: pkg:generic/spring-projects/spring-tools@1.64.0-202506120649
+#   download:
+#     files:
+#       spring-boot.vsix: https://cdn.spring.io/spring-tools/snapshot/vscode-extensions/vscode-spring-boot/vscode-spring-boot-{{version}}.vsix
 source:
-  # renovate:datasource=github-tags
-  id: pkg:generic/spring-projects/spring-tools@1.64.0-202506120649
+  id: pkg:openvsx/VMware/vscode-spring-boot@1.63.0
   download:
-    files:
-      spring-boot.vsix: https://cdn.spring.io/spring-tools/snapshot/vscode-extensions/vscode-spring-boot/vscode-spring-boot-{{version}}.vsix
+    file: VMware.vscode-spring-boot-{{version}}.vsix
