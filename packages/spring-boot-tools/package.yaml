@@ -18,6 +18,6 @@ categories:
 #     files:
 #       spring-boot.vsix: https://cdn.spring.io/spring-tools/snapshot/vscode-extensions/vscode-spring-boot/vscode-spring-boot-{{version}}.vsix
 source:
-  id: pkg:openvsx/VMware/vscode-spring-boot@1.63.0
+  id: pkg:openvsx/VMware/vscode-spring-boot@1.64.0
   download:
     file: VMware.vscode-spring-boot-{{version}}.vsix
