@@ -13,7 +13,7 @@ source:
   build:
     run: |
       ./make.sh
-      rm -rf 3rd build doc Dockerfile LICENSE log make* README.md test* theme-tokens.md tools ./.*
+      rm -rf 3rd build doc Dockerfile LICENSE log make* README.md test* theme-tokens.md tools .editorconfig .git .github .gitignore .gitmodules .luarc.json .vscode
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/LuaLS/vscode-lua/master/package.json
 bin:
