@@ -9,6 +9,6 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:npm/@mistweaverco/kulala-ls@1.10.0
+  id: pkg:npm/@mistweaverco/kulala-ls@1.11.1
 bin:
   kulala-ls: npm:kulala-ls
