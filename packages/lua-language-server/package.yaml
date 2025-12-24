@@ -12,6 +12,7 @@ source:
   id: pkg:github/LuaLS/lua-language-server@3.16.3
   build:
     run: |
+      chmod +x ./make.sh
       ./make.sh
       rm -rf 3rd build doc Dockerfile LICENSE log make* README.md test* theme-tokens.md tools .editorconfig .git .github .gitignore .gitmodules .luarc.json .vscode
 schemas:
