@@ -10,7 +10,7 @@ categories:
   - LSP
 source:
   # renovate:datasource=github-tags
-  id: pkg:github/mistweaverco/kulala-ls@1.11.1
+  id: pkg:github/mistweaverco/kulala-ls@v1.11.1
   build:
     run: |
       rm -rf .editor .editorconfig .git .github .gitignore .nvmrc .yamllint.yaml CODE_OF_CONDUCT.md CODEOWNERS CONTRIBUTING.md eslint.config.mjs LICENSE logo.png logo.svg Makefile package-lock.json package.json pkg README.md rollup.config.mjs scripts tsconfig.json
