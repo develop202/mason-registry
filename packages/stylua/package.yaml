@@ -9,6 +9,7 @@ languages:
   - Luau
 categories:
   - Formatter
+
 source:
   id: pkg:cargo/stylua@2.3.1
 bin:
