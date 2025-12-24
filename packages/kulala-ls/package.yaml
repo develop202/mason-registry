@@ -9,6 +9,19 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:npm/@mistweaverco/kulala-ls@1.11.1
+  # renovate:datasource=github-tags
+  id: pkg:github/mistweaverco/kulala-ls@1.11.1
+  build:
+    run: |
+      rm -rf .editor .editorconfig .git .github .gitignore .nvmrc .yamllint.yaml CODE_OF_CONDUCT.md CODEOWNERS CONTRIBUTING.md eslint.config.mjs LICENSE logo.png logo.svg Makefile package-lock.json package.json pkg README.md rollup.config.mjs scripts tsconfig.json
+      npm pack @mistweaverco/kulala-ls
+      tar -zxf mistweaverco-kulala-ls*.tgz
+      sed -i 's/"tree-sitter": .*/"tree-sitter": "0.25.0"/' package/package.json
+      tar -zcf mistweaverco-kulala-ls.tgz package
+      npm i ./mistweaverco-kulala-ls.tgz
+      mv node_modules/@mistweaverco .
+      mv node_modules/.bin .
+      mv node_modules/.package-lock.json .
+      rm -rf ./package.json ./package-lock.json ./node_modules ./mistweaverco-kulala-ls* ./package
 bin:
-  kulala-ls: npm:kulala-ls
+  kulala-ls: ./.bin/kulala-ls
