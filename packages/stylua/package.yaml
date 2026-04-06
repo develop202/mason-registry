@@ -11,6 +11,6 @@ categories:
   - Formatter
 
 source:
-  id: pkg:cargo/stylua@2.4.0
+  id: pkg:cargo/stylua@2.4.1
 bin:
   stylua: cargo:stylua
