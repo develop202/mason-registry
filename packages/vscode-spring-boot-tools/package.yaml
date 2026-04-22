@@ -12,16 +12,13 @@ languages:
   - Java
 categories:
   - LSP
-
 source:
   # renovate:datasource=github-tags
   id: pkg:github/spring-projects/spring-tools@vscode-spring-boot-2.1.2-RC1
   asset:
     file: vscode{{version|strip_prefix "vscode"}}.vsix
-
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/spring-projects/spring-tools/vscode-spring-boot-{{version}}/vscode-extensions/vscode-spring-boot/package.json
-
 share:
   vscode-spring-boot-tools/jdtls/: extension/jars/
-  vscode-spring-boot-tools/language-server.jar: extension/language-server/spring-boot-language-server-{{version}}-SNAPSHOT-exec.jar
+  # vscode-spring-boot-tools/language-server.jar: extension/language-server/spring-boot-language-server-{{version}}-SNAPSHOT-exec.jar

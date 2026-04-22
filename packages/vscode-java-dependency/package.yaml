@@ -10,7 +10,7 @@ categories:
   - Runtime
 source:
   # renovate:datasource=github-tags
-  id: pkg:generic/Microsoft/vscode-java-dependency@0.27.2
+  id: pkg:github/Microsoft/vscode-java-dependency@0.27.2
   download:
     file: https://open-vsx.org/api/vscjava/vscode-java-dependency/{{version}}/file/vscjava.vscode-java-dependency-{{version}}.vsix
 share:
