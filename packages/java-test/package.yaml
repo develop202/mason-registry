@@ -23,6 +23,7 @@ categories:
   - DAP
 
 source:
+  # renovate:datasource=github-tags
   id: pkg:generic/microsoft/vscode-java-test@0.45.0
   download:
     files: 
