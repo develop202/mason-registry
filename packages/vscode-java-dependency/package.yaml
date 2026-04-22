@@ -1,0 +1,18 @@
+---
+name: vscode-java-dependency
+description: Visual Studio Code extension for managing Java projects, dependencies, and exporting JAR files
+homepage: https://github.com/Microsoft/vscode-java-dependency
+licenses:
+  - MIT
+languages:
+  - Java
+categories:
+  - Runtime
+source:
+  # renovate:datasource=github-tags
+  id: pkg:generic/Microsoft/vscode-java-dependency@0.27.2
+  download:
+    file:
+      vscode-java-dependency.vsix: https://open-vsx.org/api/vscjava/vscode-java-dependency/{{version}}/file/vscjava.vscode-java-dependency-{{version}}.vsix
+share:
+  vscode-java-dependency/: extension/server/
