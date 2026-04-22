@@ -9,9 +9,10 @@ languages:
 categories:
   - DAP
 source:
+  # renovate:datasource=github-tags
   id: pkg:github/Microsoft/vscode-java-debug@0.59.0
   download:
-    file: https://open-vsx.org/api/vscjava/vscode-java-debug/{{version}}/file/vscjava.vscode-java-debug-{{version}}.vsix
-share:
-  java-debug-adapter/: extension/server/
-  java-debug-adapter/com.microsoft.java.debug.plugin.jar: extension/server/com.microsoft.java.debug.plugin-0.53.2.jar
+    files: https://open-vsx.org/api/vscjava/vscode-java-debug/{{version}}/file/vscjava.vscode-java-debug-{{version}}.vsix
+# share:
+#   java-debug-adapter/: extension/server/
+#   java-debug-adapter/com.microsoft.java.debug.plugin.jar: extension/server/com.microsoft.java.debug.plugin-0.53.2.jar

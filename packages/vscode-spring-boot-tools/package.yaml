@@ -19,6 +19,4 @@ source:
     file: vscode{{version|strip_prefix "vscode"}}.vsix
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/spring-projects/spring-tools/vscode-spring-boot-{{version}}/vscode-extensions/vscode-spring-boot/package.json
-share:
-  vscode-spring-boot-tools/jdtls/: extension/jars/
-  # vscode-spring-boot-tools/language-server.jar: extension/language-server/spring-boot-language-server-{{version}}-SNAPSHOT-exec.jar
+
