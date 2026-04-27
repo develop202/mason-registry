@@ -13,9 +13,8 @@ languages:
 categories:
   - LSP
 source:
-  # renovate:datasource=github-tags
-  id: pkg:github/spring-projects/spring-tools@vscode-spring-boot-2.1.2-RC1
+  id: pkg:github/spring-projects/spring-tools@5.1.2.RELEASE
   asset:
-    file: v{{version|strip_prefix "v"}}.vsix
+    file: vscode-spring-boot-*.vsix
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/spring-projects/spring-tools/{{version}}/vscode-extensions/vscode-spring-boot/package.json
