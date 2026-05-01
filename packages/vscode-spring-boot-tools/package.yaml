@@ -15,7 +15,7 @@ categories:
 source:
   # renovate:versioning=regex:^vscode-spring-boot-(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+)-RC(\d+)$
   # renovate:datasource=github-tags
-  id: pkg:github/spring-projects/spring-tools@vscode-spring-boot-2.1.1-RC3
+  id: pkg:github/spring-projects/spring-tools@vscode-spring-boot-2.1.2-RC1
   asset: 
     file: v{{version|strip_prefix "v"}}.vsix
   # download:
