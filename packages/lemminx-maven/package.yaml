@@ -9,7 +9,7 @@ licenses:
 languages:
   - XML
 categories:
-  - LSP
+  - Runtime
 source:
   # renovate:datasource=github-tags
   id: pkg:github/eclipse/lemminx-maven@0.12.0

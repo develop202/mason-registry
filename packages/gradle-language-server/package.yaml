@@ -8,19 +8,15 @@ languages:
   - Gradle
 categories:
   - LSP
-
 source:
   # renovate:datasource=github-tags
   id: pkg:generic/microsoft/vscode-gradle@3.17.3
   download:
-    files: 
+    files:
       vscjava.vscode-gradle.vsix: https://open-vsx.org/api/vscjava/vscode-gradle/{{version}}/file/vscjava.vscode-gradle-{{version}}.vsix
-
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/microsoft/vscode-gradle/{{version}}/extension/package.json
-
 bin:
   gradle-language-server: java-jar:extension/lib/gradle-language-server.jar
-
 neovim:
   lspconfig: gradle_ls

@@ -13,7 +13,6 @@ description: |
   - JUnit 5 (v5.1.0+)
   - JUnit 6 (v6.0.1+)
   - TestNG (v6.8.0+)
-
 homepage: https://github.com/microsoft/vscode-java-test
 licenses:
   - MIT
@@ -21,22 +20,19 @@ languages:
   - Java
 categories:
   - DAP
-
 source:
   # renovate:datasource=github-tags
   id: pkg:generic/microsoft/vscode-java-test@0.45.0
   download:
-    files: 
+    files:
       vscjava.vscode-java-test.vsix: https://open-vsx.org/api/vscjava/vscode-java-test/{{version}}/file/vscjava.vscode-java-test-{{version}}.vsix
     plugin_version: 0.43.1
-
   version_overrides:
     - constraint: semver:<=0.43.1
       id: pkg:openvsx/vscjava/vscode-java-test@0.43.1
       download:
         file: vscjava.vscode-java-test-{{version}}.vsix
         plugin_version: "{{version}}"
-
 share:
   java-test/: extension/server/
   java-test/com.microsoft.java.test.plugin.jar: extension/server/com.microsoft.java.test.plugin-{{ source.download.plugin_version }}.jar
