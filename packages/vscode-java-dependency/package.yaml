@@ -16,3 +16,4 @@ source:
       vscode-java-dependency.vsix: https://open-vsx.org/api/vscjava/vscode-java-dependency/{{version}}/file/vscjava.vscode-java-dependency-{{version}}.vsix
 share:
   vscode-java-dependency/: extension/server/
+
