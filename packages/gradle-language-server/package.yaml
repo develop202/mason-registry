@@ -10,7 +10,7 @@ categories:
   - LSP
 source:
   # renovate:datasource=github-tags
-  id: pkg:generic/microsoft/vscode-gradle@3.17.3
+  id: pkg:generic/microsoft/vscode-gradle@3.18.0
   download:
     files:
       vscjava.vscode-gradle.vsix: https://open-vsx.org/api/vscjava/vscode-gradle/{{version}}/file/vscjava.vscode-gradle-{{version}}.vsix
