@@ -13,11 +13,10 @@ languages:
 categories:
   - LSP
 source:
-  # renovate:versioning=regex:^vscode-spring-boot-(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+)-RC(\d+)$
-  # renovate:datasource=github-tags
+  # renovate:datasource=github-release
   id: pkg:generic/spring-projects/spring-tools@vscode-spring-boot-2.3.0-RC2
   download:
     files:
-      vscode-spring-boot.vsix: https://github.com/spring-projects/spring-tools/releases/latest/download/{{version}}.vsix
+      vscode-spring-boot.vsix: https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vmware/vsextensions/vscode-spring-boot/{{ (tonumber(string.match(version, "^(%d+)")) - 3) .. "." .. string.match(version, "^%d+%.(.+)%.RELEASE$") }}/vspackage
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/spring-projects/spring-tools/{{version}}/vscode-extensions/vscode-spring-boot/package.json
