@@ -13,6 +13,7 @@ languages:
 categories:
   - LSP
 source:
+  # renovate:versioning=regex:^(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+).RELEASE$
   # renovate:datasource=github-release
   id: pkg:generic/spring-projects/spring-tools@5.2.0.RELEASE
   download:
