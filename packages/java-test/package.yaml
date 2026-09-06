@@ -25,7 +25,7 @@ source:
   id: pkg:generic/microsoft/vscode-java-test@0.46.0
   download:
     files:
-      vscjava.vscode-java-test.vsix: https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/{{version}}/vspackage
+      vscjava.vscode-java-test.vsix: https://open-vsx.org/api/vscjava/vscode-java-test/{{version}}/file/vscjava.vscode-java-test-{{version}}.vsix
     plugin_version: 0.43.1
   version_overrides:
     - constraint: semver:<=0.43.1

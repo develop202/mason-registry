@@ -13,6 +13,6 @@ source:
   id: pkg:generic/Microsoft/vscode-java-debug@0.59.0
   download:
     files:
-      vscode-java-debug.vsix: https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/{{version}}/vspackage
+      vscode-java-debug.vsix: https://open-vsx.org/api/vscjava/vscode-java-debug/{{version}}/file/vscjava.vscode-java-debug-{{version}}.vsix
 share:
   java-debug-adapter/: extension/server/

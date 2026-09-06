@@ -13,7 +13,7 @@ source:
   id: pkg:generic/microsoft/vscode-gradle@3.18.0
   download:
     files:
-      vscjava.vscode-gradle.vsix: https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-gradle/{{version}}/vspackage
+      vscjava.vscode-gradle.vsix: https://open-vsx.org/api/vscjava/vscode-gradle/{{version}}/file/vscjava.vscode-gradle-{{version}}.vsix
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/microsoft/vscode-gradle/{{version}}/extension/package.json
 bin:

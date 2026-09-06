@@ -14,9 +14,9 @@ categories:
   - LSP
 source:
   # renovate:datasource=github-release
-  id: pkg:generic/spring-projects/spring-tools@vscode-spring-boot-2.3.0-RC2
+  id: pkg:generic/spring-projects/spring-tools@5.3.0.RELEASE
   download:
     files:
-      vscode-spring-boot.vsix: https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vmware/vsextensions/vscode-spring-boot/{{ (tonumber(string.match(version, "^(%d+)")) - 3) .. "." .. string.match(version, "^%d+%.(.+)%.RELEASE$") }}/vspackage
+      vscode-spring-boot.vsix: https://open-vsx.org/api/VMware/vscode-spring-boot/2{{version | strip_prefix "5" | strip_suffix ".RELEASE"}}/file/VMware.vscode-spring-boot-2{{version | strip_prefix "5" | strip_suffix ".RELEASE" }}.vsix
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/spring-projects/spring-tools/{{version}}/vscode-extensions/vscode-spring-boot/package.json
