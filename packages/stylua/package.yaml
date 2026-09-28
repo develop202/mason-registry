@@ -10,6 +10,6 @@ languages:
 categories:
   - Formatter
 source:
-  id: pkg:cargo/stylua@2.5.2
+  id: pkg:cargo/stylua@2.5.2?features=luajit
 bin:
   stylua: cargo:stylua
