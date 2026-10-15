@@ -23,4 +23,3 @@ source:
       rm -f outer.vsix*
 share:
   vscode-java-dependency/: extension/server/
-
