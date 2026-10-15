@@ -9,7 +9,7 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:github/LuaLS/lua-language-server@3.19.1
+  id: pkg:github/LuaLS/lua-language-server@3.19.2
   build:
     run: |
       chmod +x ./make.sh
