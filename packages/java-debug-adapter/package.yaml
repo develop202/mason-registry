@@ -11,8 +11,15 @@ categories:
 source:
   # renovate:datasource=github-tags
   id: pkg:generic/Microsoft/vscode-java-debug@0.60.0
-  download:
-    files:
-      vscode-java-debug.vsix: https://open-vsx.org/api/vscjava/vscode-java-debug/{{version}}/file/vscjava.vscode-java-debug-{{version}}.vsix
+  build:
+    env:
+      VERSION: "{{ version }}"
+    run: |
+      curl -fLsS "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-debug/$VERSION/vspackage" -o outer.vsix.zip
+      7z x -y outer.vsix.zip
+      inner="$(find outer.vsix -type f \( -iname '*.zip' -o -iname '*.vsix' \) -print -quit)"
+      test -n "$inner"
+      7z x -y "$inner"
+      rm -f outer.vsix*
 share:
   java-debug-adapter/: extension/server/
