@@ -18,14 +18,42 @@ source:
   id: pkg:generic/spring-projects/spring-tools@5.4.0.RELEASE
 
   build:
-    env:
-      VERSION: '2{{version | strip_prefix "5" | strip_suffix ".RELEASE"}}'
-    run: |
-      curl -fLsS "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/VMware/vsextensions/vscode-spring-boot/$VERSION/vspackage" -o outer.vsix.zip
-      7z x -y outer.vsix.zip
-      inner="$(find outer.vsix -type f \( -iname '*.zip' -o -iname '*.vsix' \) -print -quit)"
-      test -n "$inner"
-      7z x -y "$inner"
-      rm -f outer.vsix*
+
+    - target: unix
+      env:
+        VERSION: '2{{version | strip_prefix "5" | strip_suffix ".RELEASE"}}'
+      run: |
+        curl -fLsS "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/VMware/vsextensions/vscode-spring-boot/$VERSION/vspackage" -o outer.vsix.zip
+        7z x -y outer.vsix.zip
+        inner="$(find outer.vsix -type f \( -iname '*.zip' -o -iname '*.vsix' \) -print -quit)"
+        test -n "$inner"
+        7z x -y "$inner"
+        rm -f outer.vsix*
+
+    - target: win
+      env:
+        VERSION: '2{{version | strip_prefix "5" | strip_suffix ".RELEASE"}}'
+      run: |
+        $ErrorActionPreference = 'Stop'
+
+        $url = "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/VMware/vsextensions/vscode-spring-boot/$($env:VERSION)/vspackage"
+        curl.exe -fLsS $url -o outer.vsix.zip
+        if ($LASTEXITCODE -ne 0) { throw 'Download failed' }
+
+        7z x -y outer.vsix.zip
+        if ($LASTEXITCODE -ne 0) { throw 'Outer extraction failed' }
+
+        $inner = Get-ChildItem -LiteralPath 'outer.vsix' -Recurse -File |
+          Where-Object { $_.Extension -in @('.zip', '.vsix') } |
+          Select-Object -First 1 -ExpandProperty FullName
+
+        if (-not $inner) { throw 'Inner archive not found' }
+
+        7z x -y $inner
+        if ($LASTEXITCODE -ne 0) { throw 'Inner extraction failed' }
+
+        Remove-Item -LiteralPath 'outer.vsix.zip' -Force -ErrorAction SilentlyContinue
+
+        Remove-Item -LiteralPath 'outer.vsix' -Recurse -Force -ErrorAction SilentlyContinue
 schemas:
   lsp: vscode:https://raw.githubusercontent.com/spring-projects/spring-tools/{{version}}/vscode-extensions/vscode-spring-boot/package.json

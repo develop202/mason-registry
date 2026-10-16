@@ -25,14 +25,41 @@ source:
   id: pkg:generic/microsoft/vscode-java-test@0.47.0
 
   build:
-    env:
-      VERSION: "{{ version }}"
-    run: |
-      curl -fLsS "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/$VERSION/vspackage" -o outer.vsix.zip
-      7z x -y outer.vsix.zip
-      inner="$(find outer.vsix -type f \( -iname '*.zip' -o -iname '*.vsix' \) -print -quit)"
-      test -n "$inner"
-      7z x -y "$inner"
-      rm -f outer.vsix*
+    - target: unix
+      env:
+        VERSION: "{{ version }}"
+      run: |
+        curl -fLsS "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/$VERSION/vspackage" -o outer.vsix.zip
+        7z x -y outer.vsix.zip
+        inner="$(find outer.vsix -type f \( -iname '*.zip' -o -iname '*.vsix' \) -print -quit)"
+        test -n "$inner"
+        7z x -y "$inner"
+        rm -f outer.vsix*
+
+    - target: win
+      env:
+        VERSION: "{{ version }}"
+      run: |
+        $ErrorActionPreference = 'Stop'
+
+        $url = "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/vscjava/vsextensions/vscode-java-test/$($env:VERSION)/vspackage"
+        curl.exe -fLsS $url -o outer.vsix.zip
+        if ($LASTEXITCODE -ne 0) { throw 'Download failed' }
+
+        7z x -y outer.vsix.zip
+        if ($LASTEXITCODE -ne 0) { throw 'Outer extraction failed' }
+
+        $inner = Get-ChildItem -LiteralPath 'outer.vsix' -Recurse -File |
+          Where-Object { $_.Extension -in @('.zip', '.vsix') } |
+          Select-Object -First 1 -ExpandProperty FullName
+
+        if (-not $inner) { throw 'Inner archive not found' }
+
+        7z x -y $inner
+        if ($LASTEXITCODE -ne 0) { throw 'Inner extraction failed' }
+
+        Remove-Item -LiteralPath 'outer.vsix.zip' -Force -ErrorAction SilentlyContinue
+
+        Remove-Item -LiteralPath 'outer.vsix' -Recurse -Force -ErrorAction SilentlyContinue
 share:
   java-test/: extension/server/
