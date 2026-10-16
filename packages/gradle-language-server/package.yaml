@@ -11,7 +11,6 @@ categories:
 source:
   # renovate:datasource=github-tags
   id: pkg:generic/microsoft/vscode-gradle@3.18.1
-
   build:
     - target: unix
       env:
