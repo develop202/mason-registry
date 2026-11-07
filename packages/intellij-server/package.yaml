@@ -13,7 +13,7 @@ categories:
 source:
   # renovate:versioning=regex:^v(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+)$
   # renovate:datasource=github-releases
-  id: pkg:generic/Kotlin/kotlin-lsp@v263.7084.0
+  id: pkg:generic/Kotlin/kotlin-lsp@v271.2085.0
   download:
     - target: darwin_x64
       files:
