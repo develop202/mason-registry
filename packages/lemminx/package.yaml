@@ -8,6 +8,7 @@ languages:
   - XML
 categories:
   - LSP
+
 source:
   # renovate:datasource=github-tags
   id: pkg:generic/eclipse/lemminx@0.40.0
